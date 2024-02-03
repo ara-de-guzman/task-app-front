@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Karla", sans-serif;
+  height: 100vh;
+  color: #000;
+  
+}
+
+h2 {
+  color: #070707;
+}
+a {
+  text-decoration: none;
+  color: #100;
+}
+p {
+  line-height: 1.7;
+}
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 1.1;
+}
+h1,
+h2,
+h3 {
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 10px;
+}
+.header ul {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header ul li {
+  margin-left: 10px;
+}
+.header ul li a {
+  display: flex;
+  align-items: center;
+}
+.header ul li a:hover {
+  color: #000;
+}
+.header ul li a svg {
+  margin-right: 0px;
+}
+.heading {
+  font-size: 1rem;
+  font-weight: 100px;
+  margin-bottom: 10px;
+  padding: 10 0px;
+}
+.heading p {
+  color: #070707;
+}
+.goals {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+.goal {
+  background-color: #fefefe;
+  margin: 10px 0;
+  padding: 10px 10 0px;
+  position: relative;
+}
+.goal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.form,
+.content {
+  width: 50%;
+  margin: 0 auto;
+}
+.form-group {
+  margin-bottom: 10px;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e1e1e1;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 0px 5px;
+}
+.btn {
+  padding: 10px 10px;
+  border: 1px solid #100;
+  border-radius: 10px;
+  background: #100;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 100;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transfrom .5s ease
+}
+.btn svg {
+  margin-right: 10px;
+}
+.btn-reverse {
+  background: #fff;
+  color: #000;
+}
+.btn-block {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loadingSpinner {
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  border-color: #100 transparent #000 transparent;
+  border-radius: 10%;
+  animation: spin 0.5s linear infinite;
+}
+
+
+.tasks {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: auto;
+  gap:1rem;
+}
+
+.task {
+  background-color: #e1e1e1;
+  padding: 2rem;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(100deg);
+  }
+}
+@media (max-width: 600px) {
+  .form {
+    width: 100%;
+  }
+  .heading h1 {
+    font-size: 2rem;
+  }
+  .heading p {
+    font-size: 7rem;
+  }
+}
