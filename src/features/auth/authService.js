@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = "http://localhost:8000/api/users/";
+const API_URL = "https://taskbackend-yqw0nfw1.b4a.run/api/users/";
 
 
 const register = async (userData) => {
